@@ -1,0 +1,42 @@
+.martixNum {
+    border-left: 2px solid #333;
+    border-right: 2px solid #333;
+    border-radius: 6px;
+}
+
+.nameColMatrix {
+    text-align: center;
+}
+
+.containerMatrix {
+    justify-content: space-around;
+}
+
+.btnMatrix {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.martixFirst {
+    display: flex;
+    justify-content: space-around;
+}
+
+.formMatrix {
+    display: contents;
+}
+
+.btnCheck {
+    display: flex !important;
+    justify-content: center !important;
+    margin: 25px auto 0 auto !important;
+}
+
+.martixNumFormMain {
+    margin: 20px !important;
+    border-left: 2px solid #333;
+    border-right: 2px solid #333;
+    border-radius: 6px;
+    margin: 0 auto !important;
+}

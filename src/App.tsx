@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Matrix from './matrix/index';
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
+import { Box } from '@material-ui/core';
+import HorizontalLinearStepper from './matrix/step';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import reducer from '../src/store/reducer/reducer'
 
-function App() {
+const App = () => {
+
+  const store = createStore(reducer);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Container maxWidth="md">
+        <main>
+          <Box>
+            <Typography variant="h4" gutterBottom className="welcomeMatrix">
+              Welcome to My Matrix Project
+            </Typography>
+            <Provider store={store}>
+              <HorizontalLinearStepper />
+            </Provider>
+          </Box>
+        </main>
+      </Container>
     </div>
-  );
+  )
 }
 
 export default App;
